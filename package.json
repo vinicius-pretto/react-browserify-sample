@@ -1,0 +1,36 @@
+{
+  "name": "react-browserify-sample",
+  "version": "1.0.0",
+  "description": "A Basic Example with React and Browserify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react:build:watch": "watchify app/App.js -o public/bundle.js -t [babelify]",
+    "react:build": "browserify app/App.js -o public/bundle.js -t [babelify]",
+    "start": "npm run react:build && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicius-pretto/react-browserify-sample.git"
+  },
+  "keywords": [
+    "react", 
+    "browserify",
+    "es2015",
+    "babel"
+  ],
+  "author": "Vinicius Pretto <vini.prettodasilva@gmail.com> (http://github.com/vinicius-pretto)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "watchify": "^3.7.0"
+  }
+}
